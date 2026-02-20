@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import teamData from '~/data/team.json';
+import { getPermalink } from '~/utils/permalinks';
 
 interface TeamMember {
   name: string;
@@ -38,6 +39,7 @@ const team = (teamData as TeamMember[]).sort((a, b) => a.order - b.order);
             <div class="mt-3 flex flex-wrap gap-3 text-sm">
               {member.email ? <a class="text-sky-700 hover:underline" href={`mailto:${member.email}`}>Email</a> : null}
               {member.website ? <a class="text-sky-700 hover:underline" href={member.website}>Website</a> : null}
+              {member.role === 'PI' ? <a class="text-sky-700 hover:underline" href={getPermalink('/team/pi')}>View Full Profile</a> : null}
             </div>
           </article>
         ))
