@@ -2,6 +2,48 @@
 
 This document is for lab members who maintain the Basdogan Lab website.
 
+## 0. Run Locally
+
+### Prerequisites
+1. Node.js 20+ installed.
+2. Run from repository root: `basdoganlab/`.
+
+### Install dependencies
+1. Run:
+   ```bash
+   npm ci
+   ```
+
+### Development mode (hot reload)
+1. Start dev server:
+   ```bash
+   npm run dev -- --host 127.0.0.1 --port 4321
+   ```
+2. Open:
+   - `http://127.0.0.1:4321/basdoganlab`
+3. Stop server with `Ctrl + C`.
+
+### Production preview (same output as deploy)
+1. Build:
+   ```bash
+   npm run build
+   ```
+2. Preview:
+   ```bash
+   npm run preview -- --host 127.0.0.1 --port 4321
+   ```
+3. Open:
+   - `http://127.0.0.1:4321/basdoganlab`
+4. Stop server with `Ctrl + C`.
+
+### Quick local verification checklist
+1. Home: `/basdoganlab`
+2. Research: `/basdoganlab/research`
+3. News: `/basdoganlab/news`
+4. Publications: `/basdoganlab/publications`
+5. Team: `/basdoganlab/team`
+6. Contact: `/basdoganlab/contact`
+
 ## 1. Page-by-Page Update Guide
 
 Use this section to update each public page explicitly: Home, Research, News, Publications, Team, and Contact.
